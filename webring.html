@@ -1,0 +1,47 @@
+<html>
+<body>
+  <h1 id="name">James O'Toole</h1>
+  <h2>Two truths.... and ONE LIE</h2>
+  <h3>Please check the boxes next to the two statements you believe to be accurate.</h3>
+  <ul>
+    <li id="item1">I'm a Virgo.</li><input type="checkbox" id="box1">
+    <li id="item2">I've had all my vaccinations.</li><input type="checkbox" id="box2">
+    <li id="item3">Today is not Opposite Day.</li><input type="checkbox" id="box3">
+  </ul>
+  <h4><a href="http://jason.princesspeach.nyc:8080">Now go check out my man Jason's page!</a></h4>
+
+  <script>
+  var box1 = document.getElementById("box1");
+  var func1 = function (){
+    alert("Incorrect! I can't believe you think I'm a Virgo.");
+    box1.checked = false;
+  }
+  box1.addEventListener("click", func1);
+
+  var box2 = document.getElementById("box2");
+  var func2 = function (){
+    alert("That's right! Measles-free since 1986.");
+    box2.checked = true;
+    if ((box2.checked === true) && (box3.checked === true)){
+      alert("Success!");
+    }
+  }
+  box2.addEventListener("click", func2);
+
+  var box3 = document.getElementById("box3");
+  var func3 = function (){
+    alert("That's right! Tricky, huh?");
+    box3.checked = true;
+    if ((box2.checked === true) && (box3.checked === true)){
+      alert("Success!");
+    }
+  }
+  box3.addEventListener("click", func3);
+
+  if ((box2.checked === true) && (box3.checked === true)){
+    alert("Success!");
+  }else{};
+
+  </script>
+</body>
+</html>
